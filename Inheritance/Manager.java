@@ -11,12 +11,13 @@ public class Manager extends Employee {
      * @param day the employee's day
      */
 
-    // child class cnstructor
+    // child class constructor
      public Manager(String n, double s, int year, int month, int day){
-         super(n, s, year, month, day);
+         super(n, s, year, month, day); // super: call Employee's constructor
          bonus = 0;
      }
 
+     // override this method in the superclass Employee
      public double getSalary(){
          double baseSalary = super.getSalary() + bonus;  // child call super class's method
          return baseSalary;
